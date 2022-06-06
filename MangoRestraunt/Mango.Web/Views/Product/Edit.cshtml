@@ -1,0 +1,47 @@
+﻿@model Mango.Web.Models.ProductDTO
+
+<div class="container">
+    <form asp-action="Edit" method="post">
+        <div class="row">
+            <div class="form-group col">
+                <div class="col-sm-8">
+                    <label for="name_field">Name</label>
+                    <input asp-for="@Model.ProductId"/>
+                    <input class="form-control" type="text" id="name_field" value="@Model.Name" asp-for="@Model.Name"/>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col">
+                <div class="col-sm-8">
+                    <label for="price_field">Price</label>
+                    <input class="form-control" type="number" id="price_field" value="@Model.Price" asp-for="@Model.Price"/>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col">
+                <div class="col-sm-8">
+                    <label for="Description_field">Description</label>
+                    <textarea class="form-control" id="description_field" asp-for="@Model.Description"/>@Model.Description</textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col">
+                <div class="col-sm-8">
+                     <label for="category_field">Category</label>
+                    <input class="form-control" type="text" id="category_field" value="@Model.CategoryName" asp-for="@Model.CategoryName"/>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col">
+                <div class="col-sm-8">
+                    <input type="submit" value="Submit" class="btn btn-outline-primary" />
+                    <a asp-action="ProductIndex" class="btn btn-outline-danger">Go back to the list</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

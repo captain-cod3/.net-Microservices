@@ -1,0 +1,26 @@
+﻿@model Mango.Web.Models.ProductDTO
+
+<form asp-action="Create" method="post"> 
+        <div class="container border p-2">
+            <div>
+                 Name: @Html.TextBoxFor(m=>m.Name)
+            </div>
+            <div>
+                 Price: <input type = "number" asp-for="Price"/>
+            </div>
+            <div>
+                 Description: @Html.TextAreaFor(m=>m.Description)
+            </div>
+            <div>
+                 Category: @Html.TextBoxFor(m=>m.CategoryName)
+            </div>
+            <div class="row p-2">
+                <div class="col">
+                    <input type="submit" value="Create Product" class="btn btn-outline-primary"/>
+                </div>
+                <div class="col text-end">
+                    <a asp-action="ProductIndex">Back to the list</a>
+                </div>
+            </div>
+        </div>
+</form>
